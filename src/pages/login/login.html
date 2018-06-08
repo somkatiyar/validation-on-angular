@@ -1,0 +1,30 @@
+ <div>
+
+         <form [formGroup]="formdata" (ngSubmit) = "onSubmit(formdata.value)" id="formlogin">
+
+                 <!--input element email-->
+
+                  Email :
+                  <input type="text" class="fortextbox" name="emailid" placeholder="emailid" formControlName="emailid"><br/>
+
+                   <!--error msg when wrong input-->
+
+                   <div *ngIf="isFieldValid('emailid')" errorMsg="Please inform your name">
+                      Please enter your emailid..
+                   </div>
+
+                   <!--input element -->
+
+                  Password :
+                   <input type="text" class="fortextbox" name="password" placeholder="password" formControlName="password">
+
+                 <!--error msg when wrong input-->
+
+                   <div *ngIf="isFieldValid('password')" errorMsg="Please inform your name">
+                   Please enter your password..
+                    </div><br/>
+
+                    <!--submit button-->
+                   <input type="submit" class="forsubmit" value="Login" >
+          </form>
+</div>

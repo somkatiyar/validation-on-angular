@@ -1,0 +1,16 @@
+<div>
+<!--form declaration-->
+         <form [formGroup]="formdatacheck" (ngSubmit) = "onSubmit(formdatacheck.value)">
+           <!--input declaration-->
+              Enter Number :
+              <input type="text" class="fortextbox" name="num" placeholder="input number " formControlName="num"><br/>
+
+          <!--   <div *ngIf="isFieldValid('num')" errorMsg="Please inform your name">
+                enter number..
+
+             </div>    -->
+
+  <!--submit button -->
+              <input type="submit" class="forsubmit" value="Ok" [disabled]="formdatacheck.valid" >
+         </form>
+</div>

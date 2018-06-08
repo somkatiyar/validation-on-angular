@@ -1,0 +1,51 @@
+
+<div>
+  <!--form declaration..-->
+       <form [formGroup]="formdatareg" (ngSubmit) = "onSubmit(formdatareg.value)" >
+
+  <!--input declaration-->
+          Name :
+               <input type="text" class="fortextbox" name="name" placeholder="name" formControlName="name"><br/>
+
+  <!--error msg declaration-->
+                  <div *ngIf="isFieldValid('name')" errorMsg="Please inform your name">
+                    Please enter your Name..
+
+                 </div>
+
+    <!--input declaration-->
+          Email :
+                 <input type="text" class="fortextbox" name="email" placeholder="email" formControlName="email">
+
+    <!--error msg declaration-->
+                  <div *ngIf="isFieldValid('email')" errorMsg="Please inform your name">
+                    Please enter your email..
+
+                  </div>
+
+    <!--input declaration-->
+          Address :
+                 <input type="text" class="fortextbox" name="address" placeholder="address" formControlName="address"><br/>
+
+    <!--error msg declaration-->
+                <div *ngIf="isFieldValid('address')" errorMsg="Please inform your name">
+                  Please enter your address..
+
+                 </div>
+
+      <!--input declaration-->
+          City :
+                <input type="text" class="fortextbox" name="city" placeholder="city" formControlName="city"><br/>
+
+      <!--error msg declaration-->
+
+               <div *ngIf="isFieldValid('city')" errorMsg="Please inform your name">
+                  Please enter your city..
+
+                </div>
+
+<!--submit button-->
+        <br/>
+             <input type="submit" class="forsubmit" value="Submit" >
+      </form>
+</div>
